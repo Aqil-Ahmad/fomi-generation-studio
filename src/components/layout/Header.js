@@ -4,15 +4,14 @@ import Link from "next/link";
 import { CreditCard } from "lucide-react";
 import { buttonClasses } from "@/components/ui/Button";
 import { Tooltip } from "@/components/ui/Tooltip";
-import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { PRIMARY_NAV } from "@/lib/navigation";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.css";
 
-export function Header() {
-  const progressRef = useScrollProgress();
+const ACTIVE_INDEX = 0;
 
+export function Header() {
   return (
     <header className={styles.header}>
       <div className="relative mx-auto flex h-16 max-w-[1680px] items-center px-4 sm:px-6 lg:px-8">
@@ -21,20 +20,20 @@ export function Header() {
         </Link>
 
         <nav aria-label="Main" className={styles.nav}>
-          <span ref={progressRef} aria-hidden="true" className={styles.track}>
+          <span aria-hidden="true" className={styles.track} style={{ "--active": ACTIVE_INDEX }}>
             <span className={styles.thumb} />
           </span>
-          <ul className="flex items-center gap-3">
+          <ul className={styles.list}>
             {PRIMARY_NAV.map(({ href, label, icon: Icon }, index) => (
               <li key={label}>
                 <Tooltip label={label} side="bottom">
                   <Link
                     href={href}
                     aria-label={label}
-                    aria-current={index === 0 ? "page" : undefined}
+                    aria-current={index === ACTIVE_INDEX ? "page" : undefined}
                     className={styles.link}
                   >
-                    <Icon aria-hidden="true" size={19} strokeWidth={2.2} />
+                    <Icon aria-hidden="true" width={22} height={22} />
                   </Link>
                 </Tooltip>
               </li>
