@@ -1,0 +1,34 @@
+{
+  "videos": [
+    {
+      "id": "neon-bloom",
+      "type": "video",
+      "src": "/media/videos/neon-bloom.mp4",
+      "poster": "/media/videos/neon-bloom.webp",
+      "width": 1280,
+      "height": 720,
+      "duration": 6,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoMAAcAA4BaJbACdAEO93v1ZAAA/vS4D8ln1LuQUOdqvkm5akwolRzo3y82jT9pOOb3Ulc1uKK7v2Z0p4/pFq7weQwfne++5f65DAAA",
+      "prompt": "A glowing magenta sea anemone blooming slowly in the dark",
+      "credit": {
+        "author": "Pexels",
+        "url": "https://www.pexels.com/videos/"
+      }
+    },
+    {
+      "id": "glass-leaves",
+      "type": "video",
+      "src": "/media/videos/glass-leaves.mp4",
+      "poster": "/media/videos/glass-leaves.webp",
+      "width": 1280,
+      "height": 720,
+      "duration": 8,
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoMAAcAA4BaJQBOgBIuQAAA/miqQC6Tukdpf5yt3ZXyj2buRzMxTOaAnQXRW8ww6kTIO18EBizCOHI0mEERQwAA",
+      "prompt": "Translucent glass leaves drifting past a mosaic panel on a pale grid",
+      "credit": {
+        "author": "Pexels",
+        "url": "https://www.pexels.com/videos/"
+      }
+    }
+  ]
+}

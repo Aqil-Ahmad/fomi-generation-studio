@@ -1,0 +1,81 @@
+{
+  "cards": [
+    {
+      "id": "image-generation",
+      "label": "Image Generation",
+      "media": "pixel-portrait",
+      "x": 0.25,
+      "y": 38.1,
+      "w": 14.1,
+      "ratio": "226/266"
+    },
+    {
+      "id": "image-editing",
+      "label": "Image Editing",
+      "media": "clay-character",
+      "x": 16.1,
+      "y": 0.5,
+      "w": 14.9,
+      "ratio": "239/212"
+    },
+    {
+      "id": "video-generation",
+      "label": "Video Generation",
+      "media": "neon-bloom",
+      "x": 32.7,
+      "y": 7.1,
+      "w": 37.8,
+      "ratio": "605/314",
+      "size": "large",
+      "autoplay": true
+    },
+    {
+      "id": "image-upscale",
+      "label": "Image Upscale",
+      "media": "river-maze",
+      "x": 20,
+      "y": 49.7,
+      "w": 17.4,
+      "ratio": "279/212",
+      "effect": "upscale"
+    },
+    {
+      "id": "video-upscale",
+      "label": "Video Upscale",
+      "media": "glass-leaves",
+      "x": 71.9,
+      "y": 0.5,
+      "w": 11.25,
+      "ratio": "180/266",
+      "effect": "compare"
+    },
+    {
+      "id": "consistent-characters",
+      "label": "Consistent Characters",
+      "media": "anime-figure",
+      "x": 86.1,
+      "y": 16.7,
+      "w": 13.2,
+      "ratio": "211/199"
+    },
+    {
+      "id": "image-to-video",
+      "label": "Image to Video",
+      "media": "fuji-blossom",
+      "x": 57.1,
+      "y": 69.8,
+      "w": 17.4,
+      "ratio": "279/173",
+      "effect": "drift"
+    },
+    {
+      "id": "style-transfer",
+      "label": "Style Transfer",
+      "media": "green-hills",
+      "x": 76.9,
+      "y": 62.6,
+      "w": 15.7,
+      "ratio": "251/192"
+    }
+  ]
+}
