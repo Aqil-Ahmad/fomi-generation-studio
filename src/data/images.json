@@ -1,0 +1,82 @@
+{
+  "images": [
+    {
+      "id": "anime-figure",
+      "type": "image",
+      "src": "/media/images/anime-figure.webp",
+      "width": 1067,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBACdASoMABIAPu1iqU2ppaOiMAgBMB2JZgCxDBgCuZznx3kZZ6ZHbotWAAD2vxEpsImO3cmyxOCcMZ1rx/9hcfD2Gr9tzYQC9D38ecnCj/lLOFbZUMJgw8PKJ1Y5mTXBmrWhUJjhvI8XNjA7qbQG5Ghp04dqQP6H6bY4RN+2HObPWXiC3TCmK3nXK0Otv4mjAUWAAAA=",
+      "prompt": "A figure of a girl with long teal pigtails in a straw hat, standing in a sunny meadow",
+      "credit": {
+        "author": "Ji\u0159\u00ed Navr\u00e1til",
+        "url": "https://unsplash.com/photos/fxAs253OA_Y"
+      }
+    },
+    {
+      "id": "pixel-portrait",
+      "type": "image",
+      "src": "/media/images/pixel-portrait.webp",
+      "width": 1200,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoMABAAA4BaJbACdAD7K+cfYWV6CAD932Wk8XIULzVhLrg0rV2+XTUTJovFKBv0W3D2h/0jakEAlUPCksBv+vYWKTQ0OZ2bBlW146wljZXtwCW+dA542IXQeAA=",
+      "prompt": "Pixel mosaic portrait of a woman with a red flower crown and a blue coat",
+      "credit": {
+        "author": "Vadim Bogulov",
+        "url": "https://unsplash.com/photos/MjdMKvEEuqo"
+      }
+    },
+    {
+      "id": "fuji-blossom",
+      "type": "image",
+      "src": "/media/images/fuji-blossom.webp",
+      "width": 1600,
+      "height": 1067,
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoMAAgAA4BaJbACdADbWt35wADgNbM27SnBppsGXMPnGdhR262TfhUZUeR2Ftf8mP7hd1eOj2kUevb3o7KWHpYAAAA=",
+      "prompt": "Mount Fuji behind pink cherry blossoms on a clear spring day",
+      "credit": {
+        "author": "Unsplash+",
+        "url": "https://unsplash.com/photos/premium_photo-1661964177687-57387c2cbd14"
+      }
+    },
+    {
+      "id": "green-hills",
+      "type": "image",
+      "src": "/media/images/green-hills.webp",
+      "width": 1600,
+      "height": 941,
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoMAAcAA4BaJYwCdAEO1DZFmAD+t/DJ+a557VGNRgwKZ4rQK+IRvF6wsjCo/rti/epohIyfAAA=",
+      "prompt": "Soft painted hills with cypress trees in morning mist",
+      "credit": {
+        "author": "Unsplash+",
+        "url": "https://unsplash.com/photos/premium_photo-1682308242283-f1084c2c138e"
+      }
+    },
+    {
+      "id": "river-maze",
+      "type": "image",
+      "src": "/media/images/river-maze.webp",
+      "width": 1600,
+      "height": 1067,
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoMAAgAA4BaJbACdADcmva4FAAA/s3wBjNLSHDnEZdT3NU9AeVA+ghy7is9+PVlVmS22D4ygF7l+/nU5EwgAA==",
+      "prompt": "A wooden footbridge over a river winding through terraced flower fields",
+      "credit": {
+        "author": "Unsplash+",
+        "url": "https://unsplash.com/photos/premium_photo-1711742611362-11c95193890a"
+      }
+    },
+    {
+      "id": "clay-character",
+      "type": "image",
+      "src": "/media/images/clay-character.webp",
+      "width": 1600,
+      "height": 960,
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoMAAcAA4BaJQBOgBuEGERaAAD+8eAg72ZAf7/Q31fxkGgTnuvlR4QvwiYKgTkkA5UIOvRAAAA=",
+      "prompt": "3D clay character with swept black hair on a lilac background",
+      "credit": {
+        "author": "Unsplash+",
+        "url": "https://unsplash.com/photos/premium_photo-1738590561029-33c9c5d64af2"
+      }
+    }
+  ]
+}
