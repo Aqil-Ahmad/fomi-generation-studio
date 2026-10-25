@@ -1,7 +1,17 @@
+import { Hero } from "@/components/home/Hero";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { MobileNav } from "@/components/layout/MobileNav";
+
 export default function Home() {
   return (
-    <main id="main" className="grid min-h-dvh place-items-center">
-      <h1 className="text-display font-normal tracking-tight">Figment of My Imagination</h1>
-    </main>
+    <>
+      <Header />
+      <main id="main" className="pb-16">
+        <Hero />
+      </main>
+      <Footer />
+      <MobileNav />
+    </>
   );
 }
