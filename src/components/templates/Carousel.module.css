@@ -1,0 +1,23 @@
+.item {
+  width: calc((100% - 16px) / 2.2);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+  .item {
+    width: calc((100% - 32px) / 3.3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .item {
+    width: calc((100% - 80px) / 5.4);
+  }
+}
+
+@media (min-width: 1536px) {
+  .item {
+    width: calc((100% - 96px) / 6.3);
+  }
+}

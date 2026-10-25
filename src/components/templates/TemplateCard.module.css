@@ -1,0 +1,156 @@
+.card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--color-surface-2);
+  transition: box-shadow 200ms ease-out, translate 200ms var(--ease-out-soft);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card);
+  translate: 0 -2px;
+}
+
+.card:active {
+  translate: 0 0;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 283 / 254;
+  overflow: hidden;
+}
+
+.picture {
+  object-fit: cover;
+  transition: scale 300ms var(--ease-out-soft);
+}
+
+.card:hover .media > .picture {
+  scale: 1.04;
+}
+
+.split {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 58% 0 0);
+}
+
+.split::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(42% - 2px);
+  width: 2px;
+  background: rgb(255 255 255 / 0.9);
+}
+
+.inset {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 30%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 2px solid rgb(255 255 255 / 0.9);
+  border-radius: 10px;
+  box-shadow: 0 6px 16px -8px rgb(0 0 0 / 0.5);
+}
+
+.frame {
+  position: absolute;
+  inset: 22% 24%;
+  border: 1.5px dashed rgb(255 255 255 / 0.95);
+  border-radius: 6px;
+  box-shadow: 0 0 0 100vmax rgb(255 255 255 / 0.18);
+}
+
+.badge {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  width: 34px;
+  padding: 3px 0;
+  place-items: center;
+  border-radius: 4px;
+  background: #d81f26;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.badge strong {
+  font-size: 16px;
+}
+
+.label {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 14px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.watermarkText {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgb(255 255 255 / 0.75);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  rotate: -28deg;
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+.dim {
+  filter: brightness(0.5) contrast(1.15);
+}
+
+.desaturate {
+  filter: saturate(0.15) brightness(1.08);
+}
+
+.old {
+  filter: sepia(0.85) contrast(0.85) brightness(0.95) blur(0.4px);
+}
+
+.blur {
+  filter: blur(3px) saturate(0.9);
+}
+
+.comic {
+  filter: contrast(1.5) saturate(1.7);
+}
+
+.watermark {
+  filter: brightness(0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .picture {
+    transition: none;
+  }
+
+  .card:hover {
+    translate: 0 0;
+  }
+}
