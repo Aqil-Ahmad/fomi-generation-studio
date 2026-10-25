@@ -11,7 +11,7 @@ export function Segmented({ label, options, value, onChange, className, itemClas
           aria-label={option.label}
           onClick={() => onChange(option.value)}
           className={cn(
-            "flex h-7.5 min-w-7.5 items-center justify-center rounded-chip px-2 text-sm text-ink-2 transition-[background-color,color] duration-150 hover:bg-surface-2 hover:text-ink aria-pressed:bg-accent aria-pressed:text-ink pointer-coarse:min-h-11 pointer-coarse:min-w-11",
+            "flex h-7.5 min-w-7.5 items-center justify-center rounded-chip px-2 text-sm text-ink-2 transition-[background-color,color] duration-150 hover:bg-surface-2 hover:text-ink aria-pressed:bg-accent aria-pressed:text-accent-contrast pointer-coarse:min-h-11 pointer-coarse:min-w-11",
             itemClassName,
           )}
         >

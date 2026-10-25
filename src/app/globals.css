@@ -18,6 +18,7 @@
   --accent-hover: #9c513b;
   --accent-soft: #f6e6e0;
   --on-accent: #ffffff;
+  --accent-contrast: #141414;
   --overlay: rgb(20 20 20 / 0.45);
 }
 
@@ -37,6 +38,7 @@
   --accent-hover: #9c513b;
   --accent-soft: #3a2a25;
   --on-accent: #ffffff;
+  --accent-contrast: #141414;
   --overlay: rgb(0 0 0 / 0.55);
 }
 
@@ -60,6 +62,7 @@
   --color-accent-hover: var(--accent-hover);
   --color-accent-soft: var(--accent-soft);
   --color-on-accent: var(--on-accent);
+  --color-accent-contrast: var(--accent-contrast);
   --color-overlay: var(--overlay);
 }
 
@@ -87,6 +90,42 @@
   --shadow-bar: 0 10px 40px -18px rgb(120 70 50 / 0.35);
 
   --ease-out-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --animate-result-in: result-in 320ms var(--ease-out-soft) both;
+  --animate-shimmer: shimmer 1.6s ease-in-out infinite;
+
+  @keyframes result-in {
+    from {
+      opacity: 0;
+      scale: 0.97;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  @keyframes shimmer {
+    from {
+      background-position: 100% 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+}
+
+@utility skeleton {
+  background: linear-gradient(90deg, var(--color-surface-2) 30%, var(--color-surface-3) 50%, var(--color-surface-2) 70%);
+  background-size: 300% 100%;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer base {
@@ -118,3 +157,4 @@
     cursor: pointer;
   }
 }
+
