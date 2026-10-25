@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { CreditCard } from "lucide-react";
 import { buttonClasses } from "@/components/ui/Button";
@@ -10,16 +10,41 @@ import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.css";
 
-const ACTIVE_INDEX = 0;
+function subscribeToLocation(onChange) {
+  window.addEventListener("popstate", onChange);
+  window.addEventListener("hashchange", onChange);
+  return () => {
+    window.removeEventListener("popstate", onChange);
+    window.removeEventListener("hashchange", onChange);
+  };
+}
+
+function navIndexFor(location) {
+  const index = PRIMARY_NAV.findIndex(({ href }) => href !== "/" && href.slice(1) === location);
+  return index === -1 ? 0 : index;
+}
 
 export function Header() {
+  const location = useSyncExternalStore(
+    subscribeToLocation,
+    () => window.location.search + window.location.hash,
+    () => "",
+  );
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const highlightedIndex = hoveredIndex ?? ACTIVE_INDEX;
+  const activeIndex = selectedIndex ?? navIndexFor(location);
+  const highlightedIndex = hoveredIndex ?? activeIndex;
+
+  useEffect(() => {
+    const clearSelection = () => setSelectedIndex(null);
+    window.addEventListener("popstate", clearSelection);
+    return () => window.removeEventListener("popstate", clearSelection);
+  }, []);
 
   return (
     <header className={styles.header}>
       <div className="relative mx-auto flex h-16 max-w-[1680px] items-center px-4 sm:px-6 lg:px-8">
-        <Link href="/" aria-label="Fomi home" className="rounded-chip text-ink">
+        <Link href="/" aria-label="Fomi home" onClick={() => setSelectedIndex(0)} className="rounded-chip text-ink">
           <Logo className="h-8 w-auto" />
         </Link>
 
@@ -35,8 +60,9 @@ export function Header() {
                     <Link
                       href={href}
                       aria-label={label}
-                      aria-current={index === ACTIVE_INDEX ? "page" : undefined}
+                      aria-current={index === activeIndex ? "page" : undefined}
                       data-highlighted={index === highlightedIndex || undefined}
+                      onClick={() => setSelectedIndex(index)}
                       onPointerEnter={() => setHoveredIndex(index)}
                       onFocus={() => setHoveredIndex(index)}
                       onBlur={() => setHoveredIndex(null)}
