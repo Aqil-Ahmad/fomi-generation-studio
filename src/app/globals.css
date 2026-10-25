@@ -77,7 +77,7 @@
   --text-xl: 20px;
   --text-2xl: 24px;
   --text-section: clamp(24px, 2.4vw, 34px);
-  --text-display: clamp(34px, 4.6vw, 64px);
+  --text-display: clamp(30px, 3.5vw, 54px);
 
   --radius-tiny: 5px;
   --radius-chip: 8px;

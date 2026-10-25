@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import { Sparkles } from "lucide-react";
 import { useToast } from "@/components/ui/Toast";
 import { GenerationGroup } from "./GenerationGroup";
 
@@ -44,30 +43,22 @@ export function Creations({ generation, onReuse }) {
         {announcement(groups)}
       </p>
 
-      {groups.length === 0 ? (
-        <div className="flex flex-col items-center gap-2 rounded-panel border border-dashed border-line-strong px-6 py-12 text-center">
-          <Sparkles aria-hidden="true" size={22} className="text-accent-ink" />
-          <p className="text-md font-medium">Nothing here yet</p>
-          <p className="max-w-sm text-sm text-muted">Describe an image or video in the bar below and press Generate. Your results stay here.</p>
-        </div>
-      ) : (
-        <div className="grid gap-8">
-          {groups.map((group, index) => (
-            <GenerationGroup
-              key={group.id}
-              group={group}
-              favorites={favorites}
-              priority={index === 0}
-              onOpen={(result) => setViewerIndex(results.findIndex((item) => item.id === result.id))}
-              onToggleFavorite={generation.toggleFavorite}
-              onCopy={copyPrompt}
-              onReuse={onReuse}
-              onRetry={() => generation.retry(group)}
-              onRemove={() => generation.remove(group.id)}
-            />
-          ))}
-        </div>
-      )}
+      <div className="grid gap-8">
+        {groups.map((group, index) => (
+          <GenerationGroup
+            key={group.id}
+            group={group}
+            favorites={favorites}
+            priority={index === 0}
+            onOpen={(result) => setViewerIndex(results.findIndex((item) => item.id === result.id))}
+            onToggleFavorite={generation.toggleFavorite}
+            onCopy={copyPrompt}
+            onReuse={onReuse}
+            onRetry={() => generation.retry(group)}
+            onRemove={() => generation.remove(group.id)}
+          />
+        ))}
+      </div>
 
       {viewerIndex !== null && results[viewerIndex] && (
         <MediaViewer items={results} index={viewerIndex} onNavigate={setViewerIndex} onClose={() => setViewerIndex(null)} />

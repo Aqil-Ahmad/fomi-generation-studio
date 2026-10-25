@@ -78,7 +78,7 @@ export function PromptBar({ ref, onGenerate, submitting }) {
     <form
       onSubmit={submit}
       aria-label="Create"
-      className="rounded-panel border border-accent/40 bg-surface/95 p-3 shadow-bar backdrop-blur-md sm:p-4"
+      className="rounded-panel border border-accent/40 bg-surface/95 px-3 pt-3 pb-3 shadow-bar backdrop-blur-md sm:px-4"
     >
       <label htmlFor={fieldId} className="sr-only">
         Describe what you want to create
@@ -90,12 +90,12 @@ export function PromptBar({ ref, onGenerate, submitting }) {
         onChange={(event) => setPrompt(event.target.value)}
         onKeyDown={handleKeyDown}
         maxLength={PROMPT_LIMIT}
-        rows={2}
+        rows={1}
         placeholder="Describe your imaginations to be converted to piece of art ...."
-        className="block max-h-40 min-h-12 w-full resize-none bg-transparent px-1 text-md leading-relaxed text-ink outline-none field-sizing-content placeholder:text-muted"
+        className="block max-h-32 min-h-8 w-full resize-none bg-transparent px-1 text-md leading-relaxed text-ink outline-none field-sizing-content placeholder:text-muted"
       />
 
-      <div className="mt-3 flex flex-wrap items-center gap-2 sm:gap-3">
+      <div className="mt-2 flex flex-wrap items-center gap-2 sm:gap-3">
         <Segmented
           label="Create"
           options={MODE_OPTIONS}
@@ -150,7 +150,7 @@ export function PromptBar({ ref, onGenerate, submitting }) {
             <Kbd>⌘</Kbd>
             <Kbd>Enter</Kbd>
           </span>
-          <Button type="submit" variant="accent" size="lg" disabled={!canSubmit} aria-busy={submitting} className="max-sm:flex-1">
+          <Button type="submit" variant="accent" size="lg" disabled={!canSubmit} aria-busy={submitting} className="h-11 max-sm:flex-1">
             <Sparkles aria-hidden="true" size={19} strokeWidth={2} />
             {submitting ? "Starting…" : "Generate"}
           </Button>
