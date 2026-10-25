@@ -1,0 +1,131 @@
+{
+  "groups": [
+    {
+      "id": "apps",
+      "title": "Apps",
+      "templates": [
+        {
+          "id": "tshirt",
+          "title": "T-shirt designs",
+          "media": "pixel-portrait",
+          "effect": "split",
+          "before": "grayscale",
+          "prompt": "Turn my photo into a bold, colourful T-shirt graphic with clean edges"
+        },
+        {
+          "id": "watermark",
+          "title": "Watermark remover",
+          "media": "fuji-blossom",
+          "effect": "inset",
+          "before": "watermark",
+          "prompt": "Remove the watermark and keep every detail underneath sharp"
+        },
+        {
+          "id": "relight",
+          "title": "Relight",
+          "media": "clay-character",
+          "effect": "split",
+          "before": "dim",
+          "prompt": "Relight the portrait with soft golden-hour light from the left"
+        },
+        {
+          "id": "background",
+          "title": "Background replace",
+          "media": "anime-figure",
+          "effect": "split",
+          "before": "desaturate",
+          "prompt": "Replace the background with a sunny beach at golden hour"
+        },
+        {
+          "id": "restoration",
+          "title": "Image restoration",
+          "media": "river-maze",
+          "effect": "inset",
+          "before": "old",
+          "prompt": "Restore this old photo: fix scratches, sharpen faces and add natural colour"
+        },
+        {
+          "id": "expand",
+          "title": "Expand image",
+          "media": "green-hills",
+          "effect": "frame",
+          "prompt": "Expand the image outwards and continue the landscape naturally"
+        },
+        {
+          "id": "upscale",
+          "title": "Upscale",
+          "media": "fuji-blossom",
+          "effect": "split",
+          "before": "blur",
+          "focus": "70% 40%",
+          "prompt": "Upscale to 4K and recover fine texture without changing the subject"
+        }
+      ]
+    },
+    {
+      "id": "person",
+      "title": "Person apps",
+      "templates": [
+        {
+          "id": "game-cover",
+          "title": "Game cover art",
+          "media": "anime-figure",
+          "effect": "inset",
+          "before": "grayscale",
+          "focus": "50% 30%",
+          "prompt": "Make me the hero of a gritty open-world game cover"
+        },
+        {
+          "id": "streaming",
+          "title": "Streaming thumbnail",
+          "media": "pixel-portrait",
+          "effect": "badge",
+          "badge": "Top 10",
+          "prompt": "Create a streaming-service thumbnail with me as the lead, cinematic lighting"
+        },
+        {
+          "id": "comic",
+          "title": "Comic page",
+          "media": "clay-character",
+          "effect": "split",
+          "before": "comic",
+          "prompt": "Draw me as a character on a vibrant comic book page"
+        },
+        {
+          "id": "wanted",
+          "title": "Wanted poster",
+          "media": "pixel-portrait",
+          "effect": "inset",
+          "before": "old",
+          "focus": "50% 20%",
+          "prompt": "Put me on an old wanted poster with a big reward"
+        },
+        {
+          "id": "billboard",
+          "title": "City billboard",
+          "media": "anime-figure",
+          "effect": "plain",
+          "focus": "50% 60%",
+          "prompt": "Show my photo on a giant city billboard at night"
+        },
+        {
+          "id": "fighter",
+          "title": "Fighting game player",
+          "media": "clay-character",
+          "effect": "split",
+          "before": "grayscale",
+          "focus": "60% 50%",
+          "prompt": "Turn me into a fighting game character select portrait"
+        },
+        {
+          "id": "fantasy",
+          "title": "Fantasy hero",
+          "media": "river-maze",
+          "effect": "inset",
+          "before": "dim",
+          "prompt": "Paint me as a fantasy hero in a sunlit valley"
+        }
+      ]
+    }
+  ]
+}
