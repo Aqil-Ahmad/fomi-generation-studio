@@ -1,12 +1,12 @@
-import { Cpu, House, Image, Images, Sparkles, Video } from "lucide-react";
+import { ChipIcon, HomeIcon, ImageIcon, SparkleIcon, VideoIcon } from "@/components/layout/NavIcons";
 
 export const PRIMARY_NAV = [
-  { href: "/", label: "Home", icon: House },
-  { href: "/?mode=image#create", label: "Image", icon: Image },
-  { href: "/?mode=video#create", label: "Video", icon: Video },
-  { href: "/#templates", label: "Apps", icon: Sparkles },
-  { href: "/#create", label: "Models", icon: Cpu },
-  { href: "/#creations", label: "Gallery", icon: Images },
+  { href: "/", label: "Home", icon: HomeIcon },
+  { href: "/?mode=image#create", label: "Image", icon: ImageIcon },
+  { href: "/?mode=video#create", label: "Video", icon: VideoIcon },
+  { href: "/#templates", label: "Apps", icon: SparkleIcon },
+  { href: "/#create", label: "Models", icon: ChipIcon },
+  { href: "/#creations", label: "Gallery", icon: ImageIcon },
 ];
 
 export const FOOTER_COLUMNS = [

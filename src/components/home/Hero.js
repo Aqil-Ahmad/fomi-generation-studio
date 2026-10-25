@@ -5,7 +5,7 @@ import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
-    <section aria-labelledby="hero-heading" className="mx-auto max-w-[1680px] px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
+    <section aria-labelledby="hero-heading" className="mx-auto max-w-[1680px] px-4 pt-5 sm:px-6 lg:px-8">
       <h1 id="hero-heading" className="text-center text-display font-normal tracking-tight">
         Figment of My Imagination
       </h1>

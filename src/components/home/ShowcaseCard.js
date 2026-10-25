@@ -33,6 +33,15 @@ export function ShowcaseCard({ card, media, index }) {
           <span className={styles.knob} />
         </span>
       )}
+      {card.effect === "upscale" && (
+        <span aria-hidden="true" className={styles.upscaleOverlay}>
+          <span className={styles.knob} />
+          <span className={styles.beforeAfter}>
+            <span>Before</span>
+            <span>After</span>
+          </span>
+        </span>
+      )}
       <span className={styles.label}>{card.label}</span>
     </Link>
   );
