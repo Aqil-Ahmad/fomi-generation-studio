@@ -22,7 +22,7 @@ export function ShowcaseCard({ card, media, index }) {
           alt=""
           fill
           sizes={card.size === "large" ? "(min-width: 1024px) 38vw, 80vw" : "(min-width: 1024px) 18vw, 45vw"}
-          priority={card.size === "large"}
+          priority={card.size === "large" || index < 2}
           placeholder="blur"
           blurDataURL={media.blurDataURL}
           className={styles.media}
