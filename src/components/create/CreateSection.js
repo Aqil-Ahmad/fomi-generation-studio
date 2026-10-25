@@ -26,7 +26,7 @@ export function CreateSection({ children }) {
       <div className="mx-auto max-w-[1680px] px-4 pt-10 sm:px-6 lg:px-8">
         <Creations generation={generation} onReuse={(settings) => promptRef.current?.fill(settings.prompt, settings)} />
       </div>
-      <div id="create" className="sticky bottom-20 z-20 mx-auto mt-8 max-w-[1680px] scroll-mb-6 px-3 sm:px-6 md:bottom-5 lg:px-8">
+      <div id="create" className="sticky bottom-20 z-20 mx-auto mt-8 max-w-[1680px] scroll-mt-24 scroll-mb-6 px-3 sm:px-6 md:bottom-5 lg:px-8">
         <Suspense fallback={<PromptBarSkeleton />}>
           <PromptBar ref={promptRef} onGenerate={handleGenerate} submitting={submitting} />
         </Suspense>
