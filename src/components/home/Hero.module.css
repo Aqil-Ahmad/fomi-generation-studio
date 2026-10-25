@@ -24,8 +24,8 @@
   box-shadow: var(--shadow-card);
   scroll-snap-align: start;
   transition:
-    translate 240ms var(--ease-out-soft),
-    box-shadow 240ms var(--ease-out-soft);
+    scale 360ms var(--ease-out-soft),
+    box-shadow 360ms var(--ease-out-soft);
 }
 
 .large {
@@ -33,10 +33,22 @@
   aspect-ratio: 16 / 10;
 }
 
-.card:hover {
-  z-index: 5;
-  box-shadow: 0 28px 50px -24px rgb(20 20 20 / 0.55);
-  translate: 0 -4px;
+.card:hover,
+.card:focus-visible {
+  z-index: 10;
+  box-shadow: 0 34px 60px -26px rgb(20 20 20 / 0.6);
+}
+
+@media (hover: hover) and (min-width: 1024px) {
+  .card:hover,
+  .card:focus-visible {
+    scale: 1.28;
+  }
+
+  .large:hover,
+  .large:focus-visible {
+    scale: 1.08;
+  }
 }
 
 .media {
@@ -92,6 +104,43 @@
   translate: 0 -50%;
 }
 
+.upscaleOverlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 240ms ease-out;
+}
+
+.upscaleOverlay::before {
+  content: "";
+  position: absolute;
+  inset: 0 50% 0 0;
+  border-right: 2px solid rgb(255 255 255 / 0.9);
+  backdrop-filter: blur(3px) saturate(0.85);
+}
+
+.card:hover .upscaleOverlay,
+.card:focus-visible .upscaleOverlay {
+  opacity: 1;
+}
+
+.beforeAfter {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: var(--text-sm);
+  text-shadow: 0 1px 6px rgb(0 0 0 / 0.5);
+}
+
+.upscaleOverlay .knob {
+  right: auto;
+  left: calc(50% - 10px);
+}
+
 .drift .media {
   transition: scale 6s linear, translate 6s linear;
 }
@@ -115,9 +164,9 @@
   .stage {
     position: relative;
     display: block;
-    margin: 36px auto 0;
+    width: min(100%, 1240px, (100dvh - 380px) * 2.67);
+    margin: 28px auto 0;
     padding: 0;
-    max-width: 1600px;
     aspect-ratio: 1600 / 600;
     overflow: visible;
   }
@@ -137,11 +186,11 @@
 @keyframes float-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    translate: 0 12px;
   }
   to {
     opacity: 1;
-    transform: none;
+    translate: 0 0;
   }
 }
 
@@ -152,8 +201,9 @@
     transition: none;
   }
 
-  .card:hover {
-    translate: 0 0;
+  .card:hover,
+  .card:focus-visible {
+    scale: 1;
   }
 
   .drift:hover .media {
