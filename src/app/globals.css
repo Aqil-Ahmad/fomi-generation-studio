@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --canvas: #faf8f5;
+  --surface: #ffffff;
+  --surface-2: #f3f0ec;
+  --surface-3: #ebe6e1;
+  --ink: #141414;
+  --ink-2: #4a4744;
+  --muted: #6e6964;
+  --line: #ece5df;
+  --line-strong: #e0d6ce;
+  --accent: #dfa392;
+  --accent-strong: #b05f49;
+  --accent-ink: #9c513b;
+  --accent-hover: #9c513b;
+  --accent-soft: #f6e6e0;
+  --on-accent: #ffffff;
+  --overlay: rgb(20 20 20 / 0.45);
+}
+
+[data-theme="dark"] {
+  --canvas: #131211;
+  --surface: #1c1a19;
+  --surface-2: #242120;
+  --surface-3: #2e2a28;
+  --ink: #f4f0ed;
+  --ink-2: #cdc6c0;
+  --muted: #a39c96;
+  --line: #2c2826;
+  --line-strong: #3a3533;
+  --accent: #dfa392;
+  --accent-strong: #b05f49;
+  --accent-ink: #f0b9a8;
+  --accent-hover: #9c513b;
+  --accent-soft: #3a2a25;
+  --on-accent: #ffffff;
+  --overlay: rgb(0 0 0 / 0.55);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-3xl: 120rem;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-overlay: var(--overlay);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --text-*: initial;
+  --text-2xs: 11px;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 17px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-section: clamp(24px, 2.4vw, 34px);
+  --text-display: clamp(34px, 4.6vw, 64px);
+
+  --radius-tiny: 5px;
+  --radius-chip: 8px;
+  --radius-control: 10px;
+  --radius-card: 14px;
+  --radius-panel: 22px;
+
+  --shadow-card: 0 18px 40px -22px rgb(20 20 20 / 0.45);
+  --shadow-float: 0 12px 32px -16px rgb(20 20 20 / 0.35);
+  --shadow-bar: 0 10px 40px -18px rgb(120 70 50 / 0.35);
+
+  --ease-out-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html[data-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-size: var(--text-base);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 200ms ease-out, color 200ms ease-out;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-strong);
+    outline-offset: 2px;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
 }
